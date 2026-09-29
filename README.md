@@ -18,17 +18,21 @@ There is no vector database or embeddings: the agent reads the files directly.
 
 ## Quick start
 
-```bash
-# 1. Get a model (any Ollama model with tool support works)
-ollama pull gemma4:e2b
+Prerequisites: [Python 3.10+](https://www.python.org/downloads/) (tick "Add python.exe to PATH" on Windows) and [Ollama](https://ollama.com/download) installed and running.
 
-# 2. Clone and run
-git clone https://github.com/arthi-rajendran24/simple-chatbot.git
-cd simple-chatbot
-./run.sh
+**Windows** (Command Prompt or PowerShell), one command:
+
+```bat
+git clone https://github.com/arthi-rajendran24/simple-chatbot.git && cd simple-chatbot && run.bat
 ```
 
-`run.sh` creates a virtualenv and installs dependencies on first run. Then open **http://localhost:8181**.
+**macOS / Linux**, one command:
+
+```bash
+git clone https://github.com/arthi-rajendran24/simple-chatbot.git && cd simple-chatbot && ./run.sh
+```
+
+The first run downloads the model (`gemma4:e2b`), creates a virtualenv and installs dependencies. After that it starts instantly and your browser opens **http://localhost:8181**.
 
 ## Using it
 
@@ -48,7 +52,7 @@ Environment variables:
 | `OLLAMA_URL` | `http://localhost:11434` | Ollama server address |
 | `PORT` | `8181` | Web server port |
 
-Example: `CHAT_MODEL=qwen3:8b PORT=9000 ./run.sh`
+Example (macOS/Linux): `CHAT_MODEL=qwen3:8b PORT=9000 ./run.sh`. On Windows: `set CHAT_MODEL=qwen3:8b && set PORT=9000 && run.bat`.
 
 ## Project layout
 
