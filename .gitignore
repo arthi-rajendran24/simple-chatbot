@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+# uploaded profiles are personal data; never commit them
+data/
+.DS_Store
